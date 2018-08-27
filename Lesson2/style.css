@@ -24,7 +24,7 @@ h4 {
 	}
 #main {
 	font-family: Lucida Sans; 
-	font-size: 80%; 
+	font-size: 90%; 
 	line-height: 1.35em;}
 p {
 	line-height: 1em;
@@ -33,8 +33,8 @@ p a{
 	font-size: x-small; 
 	line-height: 0em;}
 #content {
-	height: 620px;
-	width: 800px;
+	height: 680px;
+	width: 820px;
 	background-color: rgb(229,241,212);
 	column-count: 2; 
 	padding: 40px;}
@@ -46,10 +46,10 @@ hr {
 	border-style: solid;
 	border-width: 0.25px;
 	width: 800px;
-	margin-left: 40px;}
+	margin-left: 0px;}
 #table {
 	font-family: Arial;
-	font-size: 10pt;
+	font-size: 11pt;
 	margin-left: 40px;}
 #title {
 	line-height: 1em;}
@@ -57,8 +57,8 @@ hr {
 	color: black;
 	font-weight: normal;}
 table {
-	font-size: 9pt;
-	width: 800px;
+	font-size: 10pt;
+	width: 820px;
 	border-collapse: collapse;
 	line-height: 1.1em;}
 .center {
@@ -104,6 +104,6 @@ th {
 	text-indent: -10px;
 	padding-left: 25px;
 	padding-top: 5px;
-	width: 120px;}
+	width: 130px;}
 	
 				
