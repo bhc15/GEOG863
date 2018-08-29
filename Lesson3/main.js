@@ -1,4 +1,4 @@
-var coords = [34.852619, -82.394012];
+var coords = [34.852619, -82.394012]; // coordinates of my hometown
 
 require([
       "esri/Map",
