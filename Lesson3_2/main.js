@@ -45,7 +45,7 @@ require([
       var ptGraphic = new Graphic({
             geometry: pt,
             symbol: sym,
-            popupTemplate: popup
+            popupTemplate: popUp
       });
       
       myView.graphics.add(ptGraphic);
