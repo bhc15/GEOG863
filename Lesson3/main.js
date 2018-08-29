@@ -1,3 +1,5 @@
+var coords = [34.852619, -82.394012];
+
 require([
       "esri/Map",
       "esri/views/MapView",
@@ -15,12 +17,12 @@ require([
         container: "viewDiv",
         map: myMap,
         zoom: 4,
-        center: [-90, 40] // longitude, latitude
+        center: [coords[1], coords[0] // longitude, latitude
       });
       
       var pt = new Point({
-            latitude: 40.792,
-            longitude: -77.871 
+            latitude: coords[0],
+            longitude: coords[1] 
       });
       
       var sym = new SimpleMarkerSymbol({
