@@ -1,7 +1,7 @@
 html, body, #viewDiv {
       font-family: Arial;
-      padding: 0;
-      margin: 0;
+      padding: 10 px;
+      margin: 10 px;
       height: 100%;
       width: 100%;
     }
