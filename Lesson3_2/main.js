@@ -34,7 +34,7 @@ require([
       
       var popUp = new PopupTemplate({
           title: "<h3>Greenville, South Carolina</h3><hr/>",
-          content: "<p style='font-size:12pt'><strong>Incorporated:</strong> &nbsp;1831</br>" +
+          content: "<p style='font-size:11pt'><strong>Incorporated:</strong> &nbsp;1831</br>" +
           "<strong>Population (2017):</strong> &nbsp;68,219</br>" +
           "<strong>Median Household Income (2016):</strong> &nbsp;$45,360</br>" +
           "<strong>Mayor:</strong> &nbsp;Knox H. White</br></br>" +
