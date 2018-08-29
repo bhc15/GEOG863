@@ -40,7 +40,7 @@ require([
           "<strong>Mayor:</strong> &nbsp;Knox H. White</br></br>" +
           "<figure><a href='https://www.greenvillesc.gov' target='_blank'>" + 
           "<img src='https://farm3.staticflickr.com/2923/14175742446_1b07f61d12_z_d.jpg' alt='Falls Park'></a>" + 
-          "<figcaption>Falls Park in Downtown Greenville (credit: <a href='https://www.flickr.com/photos/mdleake/'>miknx</a>)" + 
+          "<figcaption>Falls Park in Downtown Greenville (credit: <a href='https://www.flickr.com/photos/mdleake/' target='_blank'>miknx</a>)" + 
           "</figcaption></figure></p>"  
       });
       
