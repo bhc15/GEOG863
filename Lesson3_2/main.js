@@ -37,9 +37,9 @@ require([
           content: "<p><strong>Incorporated:</strong> &nbsp;1831</br>" +
           "<strong>Population (2017):</strong> &nbsp;68,219</br>" +
           "<strong>Median Household Income (2016):</strong> &nbsp;$45,360</br>" +
-          "<strong>Mayor:</strong> &nbsp;Knox H. White</br></br>"+
-          "<a href='https://www.greenvillesc.gov' target='_blank'><img src='https://www.greenvillesc.gov/ImageRepository/Document?documentID=3347' alt='City of Greenville logo' ></a></p>"
-          
+          "<strong>Mayor:</strong> &nbsp;Knox H. White</br></br>" +
+          "<a href='https://www.greenvillesc.gov' target='_blank'>" + 
+          "<img src='https://www.greenvillesc.gov/ImageRepository/Document?documentID=3347' alt='City of Greenville logo' ></a></p>"  
       });
       
       var ptGraphic = new Graphic({
