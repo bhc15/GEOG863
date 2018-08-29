@@ -1,18 +1,38 @@
 require([
       "esri/Map",
       "esri/views/MapView",
+      "esri/geometry/Point",
+      "esri/symbols/SimpleMarkerSymbol",
+      "esri/Graphic",
       "dojo/domReady!"
-    ], function(Map, MapView) {
+    ], function(Map, MapView, Point, SimpleMarkerSymbol, Graphic) {
 
-      var map = new Map({
+      var myMap = new Map({
         basemap: "streets"
       });
 
-      var view = new MapView({
+      var myView = new MapView({
         container: "viewDiv",
-        map: map,
+        map: myMap,
         zoom: 4,
         center: [-90, 40] // longitude, latitude
       });
-
+      
+      var pt = new Point({
+            latitude: 40.792,
+            longitude: -77.871 
+      });
+      
+      var sym = new SimpleMarkerSymbol({
+            color: "blue",
+            style: "square",
+            size: 12
+      });
+      
+      var ptGraphic = new Graphic({
+            geometry: pt,
+            symbol: sym
+      });
+      
+      view.graphics.add(ptGraphic);
     });
