@@ -16,7 +16,7 @@ require([
       var myView = new MapView({
         container: "viewDiv",
         map: myMap,
-        zoom: 4,
+        zoom: 5,
         center: [coords[1], coords[0]] // longitude, latitude
       });
       
