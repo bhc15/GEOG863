@@ -17,7 +17,7 @@ require([
         container: "viewDiv",
         map: myMap,
         zoom: 4,
-        center: [coords[1], coords[0] // longitude, latitude
+        center: [coords[1], coords[0]] // longitude, latitude
       });
       
       var pt = new Point({
