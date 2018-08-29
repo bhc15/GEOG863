@@ -1,3 +1,5 @@
+var coords = [34.852619, -82.394012]; // coordinates of my hometown
+
 require([
       "esri/Map",
       "esri/views/MapView",
@@ -6,8 +8,6 @@ require([
       "esri/Graphic",
       "dojo/domReady!"
     ], function(Map, MapView, Point, SimpleMarkerSymbol, Graphic) {
-
-      var coords = [34.852619, -82.394012]; // coordinates of my hometown
 
       var myMap = new Map({
         basemap: "streets"
