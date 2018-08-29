@@ -34,5 +34,5 @@ require([
             symbol: sym
       });
       
-      view.graphics.add(ptGraphic);
+      myView.graphics.add(ptGraphic);
     });
