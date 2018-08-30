@@ -6,5 +6,6 @@ html, body, #viewDiv {
       width: 100%;
     }
 #text {
-      margin: 20px;}
+      margin: auto;
+      width: 75%;}
 
