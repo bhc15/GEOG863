@@ -5,5 +5,7 @@ html, body, #viewDiv {
       height: 100%;
       width: 100%;
     }
-h3, p {
+#text {
       margin: 20px;}
+p.popup {
+      font-size: 11pt;}
