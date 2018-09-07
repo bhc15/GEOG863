@@ -4,11 +4,10 @@ html, body, #viewDiv {
       margin: 0;
       height: 100%;
       width: 100%;
-    }
+}
 #text {
       width: 50%;
       padding: 20px;
       margin: auto;      
       border: 1px solid black;
-      }
-
+}
