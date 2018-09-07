@@ -17,8 +17,8 @@ require([
   });
   // create Point instance  
   var pt = new Point({
-    latitude: coords[0],
-    longitude: coords[1]
+    latitude: coords[1],
+    longitude: coords[0]
   });
   // create MapView instance
   var myView = new MapView({
