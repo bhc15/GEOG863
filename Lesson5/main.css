@@ -1,0 +1,18 @@
+html, body, #viewDiv {
+      font-family: Arial;
+      background-color: rgb(34, 35, 39);
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+}
+#text {
+      color: rgb(211, 204, 204);
+      font-size: 1.1em;
+      font-weight: 600;  
+      width: 50%;
+      line-height: 1.5;
+      padding: 10px;
+      margin: auto;      
+      border: 1px solid white;
+}
