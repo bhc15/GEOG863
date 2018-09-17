@@ -27,7 +27,7 @@ require([
         {
           value: 1000000,
           size: "10px",
-          label: "1 million"
+          label: "≤ 1 million"
         },
         {
           value: 10000000,
@@ -37,7 +37,7 @@ require([
         {
           value: 40000000,
           size: "60px",
-          label: "40 million"
+          label: "≥ 40 million"
         }]
     }]
   };
