@@ -36,7 +36,7 @@ require([
         },
         {
           value: 40000000,
-          size: "60px",
+          size: "96.6px",
           label: "≥ 40 million"
         }]
     }]
