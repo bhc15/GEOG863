@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>U.S. Alternative Fuel Stations</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.8/"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="viewDiv"></div>
+    <br />
+    <div id="text">
+        <h3>Lesson 6 Discussion</h3>
+        <p>
+            For me, this week's lesson was the most challenging by far. While the topics seemed fairly
+            straightforward in the lesson text, I struggled with implementing the Query widget when it came to the
+            assignment. There were several components that proved particularly challenging. First, it took me several
+            troubleshooting attempts to realize that a feature layer has to be added to a map before it can be queried.
+            I initially did not want to add the alternative fuel stations feature layer to the map because I wanted
+            only the fuel stations in the specified state to be visible--not all of the stations in the U.S. After
+            consulting the API Reference, I realized that I could change the visibility of the feature layer using the
+            <b>visible</b> property so that only the query results would be visible.
+        </p>
+        <p>
+            Additionally, I ran into some problems trying to represent the station types with different symbols.
+            Initially, I attempted to symbolize the stations by declaring a function that would be passed the graphic,
+            station type, and color. However, when invoking the function for each type of station type (within the
+            anonymous function contained in the <b>displayResults</b> function), only the station types corresponding
+            to the last function invocation were symbolized. Unfortunately, I was not able to successfully resolve this
+            problem so I settled for using a switch to change the color of the symbols based on the fuel station type.
+            I also used ColorBrewer to select the color scheme for the symbols even though it is arguably more
+            applicable toward polygon symbology.
+        </p>
+        <p>Moreover, I desperately wanted to include a Legend widget so that at a glance, the user could determine
+            which color corresponded to which station type. Yet sadly, the <a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html"
+                target="_blank">ArcGIS API for Javascript does not support a Legend widget for GraphicLayer objects</a>.
+            I also was mildly successful in getting the MapView to center on the selected state using the <b>goTo</b>
+            method. It does not function correctly for some states (e.g., Alabama) because the feature service
+            contains a few stations that are geocoded incorrectly, which affect the extent of the results.
+        </p>
+        <p>Basic Error handling - checks for empty string, if input state has any results, etc.</p>
+    </div>
+    <br />
+</body>
+
+</html>
