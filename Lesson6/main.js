@@ -1,7 +1,9 @@
 // prompt user for state
-var state = prompt("Please enter a state postal abbreviation (e.g., PA):").toUpperCase();
+var state = prompt("Please enter a state postal abbreviation (e.g., PA):");
 
 if (state != "") {
+
+    state = state.toUpperCase();
 
     // load Map, MapView, FeatureLayer, SimpleMarkerSymbol, GraphicsLayer, Query, Search, and Home modules
     require([
