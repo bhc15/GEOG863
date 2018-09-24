@@ -171,7 +171,7 @@ if (state != "") {
             }
 
             else {
-                alert("There are no alternative fuel stations in the state you specified: " + state + ". Please make sure that is a valid state.");
+                alert("There are no alternative fuel stations in the state you specified: " + state + ". Please make sure that is a valid state abbreviation.");
                 location.reload(true);
             }
 

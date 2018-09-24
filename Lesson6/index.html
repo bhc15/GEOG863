@@ -35,16 +35,27 @@
             to the last function invocation were symbolized. Unfortunately, I was not able to successfully resolve this
             problem so I settled for using a switch to change the color of the symbols based on the fuel station type.
             I also used ColorBrewer to select the color scheme for the symbols even though it is arguably more
-            applicable toward polygon symbology.
+            applicable toward polygon symbology. I also wanted to include a Legend widget so that at a glance, the user
+            could determine which color corresponded to which station type. Yet sadly, the <a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html"
+            target="_blank">ArcGIS API for Javascript does not support a Legend widget for GraphicLayer objects</a>.
         </p>
-        <p>Moreover, I desperately wanted to include a Legend widget so that at a glance, the user could determine
-            which color corresponded to which station type. Yet sadly, the <a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html"
-                target="_blank">ArcGIS API for Javascript does not support a Legend widget for GraphicLayer objects</a>.
-            I also was mildly successful in getting the MapView to center on the selected state using the <b>goTo</b>
-            method. It does not function correctly for some states (e.g., Alabama) because the feature service
-            contains a few stations that are geocoded incorrectly, which affect the extent of the results.
+        <p>
+            The web app includes some advanced features and functionality. I was somewhat successful in getting
+            the MapView to center on the selected state using the <b>goTo</b> method. However, it does not work
+            correctly for some states (e.g., Alabama) because the feature service contains a few stations that are
+            geocoded incorrectly, which affect the extent of the results. The app also shows an alert with the number
+            of alternative fuel stations in the specified state, and a Search widget allows the user to search for
+            stations by name, city, or zipcode. In addition, there are some basic error handling components. For
+            example, if/else conditional statements are used to ensure that the user has entered a valid state
+            abbreviation. If the input is not valid, an error alert is displayed, and the page is reloaded.
         </p>
-        <p>Basic Error handling - checks for empty string, if input state has any results, etc.; ability to search station results for state</p>
+        <p>
+            Despite the challenges I encountered, I enjoyed developing the web app for this week's assignment. It
+            reminded me of the trial-and-error, reference documentation, and debugging approaches that were
+            integral components of previous programming courses I've taken (e.g., GEOG 485 and 489). Moreover, querying
+            geospatial data is a fundamental component of GIS so I expect that the skills I've learned this week will
+            be useful in the future.
+        </p>
     </div>
     <br />
 </body>
