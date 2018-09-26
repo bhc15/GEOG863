@@ -14,7 +14,7 @@ require([
     type: "simple", // autocasts as new SimpleRenderer
     symbol: {
       type: "simple-marker",  //autocasts as new SimpleMarkerSymbol
-      color: "#ffff80",
+      color: "#ffff33",
       style: "circle"
     },
     visualVariables: [{
