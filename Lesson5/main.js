@@ -26,17 +26,17 @@ require([
       stops: [
         {
           value: 1000000,
-          size: "2.5px",
+          size: "4px",
           label: "≤ 1 million"
         },
         {
           value: 10000000,
-          size: "25px",
+          size: "40px",
           label: "10 million"
         },
         {
           value: 40000000,
-          size: "100px",
+          size: "160px",
           label: "≥ 40 million"
         }]
     }]
