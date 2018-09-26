@@ -14,7 +14,7 @@ require([
     type: "simple", // autocasts as new SimpleRenderer
     symbol: {
       type: "simple-marker",  //autocasts as new SimpleMarkerSymbol
-      color: "#9519e8",
+      color: "#ffff80",
       style: "circle"
     },
     visualVariables: [{
@@ -26,17 +26,17 @@ require([
       stops: [
         {
           value: 1000000,
-          size: "4px",
+          size: "2.5px",
           label: "≤ 1 million"
         },
         {
           value: 10000000,
-          size: "40px",
+          size: "25px",
           label: "10 million"
         },
         {
           value: 40000000,
-          size: "160px",
+          size: "100px",
           label: "≥ 40 million"
         }]
     }]
