@@ -1,0 +1,57 @@
+html, body {
+      font-family: Arial;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      padding: 0
+}
+
+table, .cell {
+      cursor: pointer;
+      padding: 5px;
+      border: 1px solid black;
+      border-collapse: collapse
+}
+
+.cell:hover, 
+.cell:focus {
+      color: white;
+      background-color: rgb(97, 93, 93);
+}
+
+#viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+}
+
+#paneDiv {
+      position: absolute;
+      top: 10px;
+      left: 65px;
+      padding: 0 12px 0 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: none;
+    }
+
+#appLayout {
+      height: 100%
+}
+
+#infoDiv {
+      margin-left: 20px;
+      font-weight: 500;  
+}
+
+#sideBar {
+      width: 15em;
+      background-color: #dfecfb;
+      visibility: hidden;
+      overflow: auto}
+
+.claro .demoLayout .edgePanel {
+      background-color: #9bc4f3;
+  }
+  
