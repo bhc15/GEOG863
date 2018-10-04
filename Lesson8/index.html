@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Message In A Bottle App</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.9/"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="viewDiv"></div>
+    <div id="loading-message"><p>Calculating bottle path...</p></div>
+    <div id="paneDiv">
+        <h3>Discover the Path of a Message In A Bottle</h3>
+        <p>Enter the number of travel days, and click on a location in the ocean to see the path of the bottle.
+            <br /><br />
+            Number of Days: <input type="number" id="num-days" value="150" min="1" maxlength="5" required>
+            <br />
+        </p>
+    </div>
+
+</body>
+
+</html>

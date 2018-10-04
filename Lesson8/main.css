@@ -1,0 +1,34 @@
+html, body {
+      font-family: Arial;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      padding: 0
+}
+
+#viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+}
+
+#loading-message {
+      position: absolute;
+      top: 50%;
+      left: 45%;
+      padding: 12px 40px;
+      background-color: rgba(73, 72, 72, 0.6);
+      color: white;
+      font-weight: 700;
+      display: none; 
+}
+
+#paneDiv {
+      position: absolute;
+      top: 10px;
+      left: 65px;
+      padding: 0 12px 0 12px;
+      background-color: rgba(73, 72, 72, 0.6);
+      color: white;
+    }
