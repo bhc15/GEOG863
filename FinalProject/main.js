@@ -1,4 +1,4 @@
-// load Map, MapView, FeatureLayer, colorRendererCreator, Legend, Home, ScaleBar, and Standby modules
+// load Map, MapView, FeatureLayer, colorRendererCreator, Home, ScaleBar, and Standby modules
 require([
     "esri/Map",
     "esri/views/MapView",
@@ -142,7 +142,7 @@ require([
                 ]
             };
 
-            cedarChart = new cedar.Chart("chart", definition);
+            var cedarChart = new cedar.Chart("chart", definition);
             cedarChart.show();
             standby.hide();
         }
