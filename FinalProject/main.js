@@ -1,4 +1,4 @@
-// load Map, MapView, FeatureLayer, colorRendererCreator, Home, ScaleBar, and Standby modules
+// load Map, MapView, FeatureLayer, colorRendererCreator, Legend, Home, ScaleBar, and Standby modules
 require([
     "esri/Map",
     "esri/views/MapView",
