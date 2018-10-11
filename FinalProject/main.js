@@ -96,9 +96,9 @@ require([
             // create PopupTemplate 
             var popUp = {
                 title: "<h3>{NAME}</h3>",
-                content: "<p>Voter Turnout Among Ages " + fields[fieldName][2] + ": <b>{" + fieldName + "} percent</b><br/><br/>" +
-                    "In the 2016 election, approximately " + fields[fieldName][0] + ",000 votes were cast by people in this age group.<br/><br/>" +
-                    "This state had approximately " + fields[fieldName][1] + ",000 citizens in this age group.</p>"
+                content: "<p>In the 2016 election, voter turnout by the " + fields[fieldName][2] + " age group was <b>{" + fieldName + "} percent.</b><br/><br/>" +
+                    "Approximately <b>" + fields[fieldName][0] + ",000</b> votes were cast by people in this age group.<br/><br/>" +
+                    "An estimated <b>" + fields[fieldName][1] + ",000</b> citizens in this age group were eligible to vote.</p>"
             };
             voterTurnout.popupTemplate = popUp;
         }
@@ -122,7 +122,7 @@ require([
             var chart = document.getElementById("chart");
             var title = document.getElementById("title");
             chart.innerHTML = "";
-            title.innerHTML = "<h4>Ages " + fieldLabel + "</h4>";
+            title.innerHTML = "<h4>Age Group: " + fieldLabel + "</h4>";
 
             var definition = {
                 type: "bar-horizontal",
