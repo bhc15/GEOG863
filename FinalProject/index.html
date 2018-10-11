@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>2016 U.S. Election Voter Turnout</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+    <link rel="stylesheet" href="main.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.12/amcharts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.12/serial.js"></script>
+    <script src="https://unpkg.com/@esri/cedar@1.0.0-beta.2/dist/umd/cedar.js"></script>
+    <script src="https://js.arcgis.com/4.9/"></script>
+    <script src="main.js"></script>
+    <script src="calcite.js"></script>
+</head>
+
+<body>
+    <div id="viewDiv"></div>
+    
+    <div id="sidePane">
+        <div id="title"></div>
+        <div id="chart"></div>
+    </div>
+
+    <div id="paneDiv">
+        <h2>Voter Turnout in the 2016 U.S. Election</h2>
+        <p>According to the U.S. Census, more than 137 million votes were cast in the 2016 U.S. election. Yet there
+            were an estimated 224 million Americans that were 18 or older and therefore eligible to vote.</p>
+        <p>Nationally, the overall percentage of eligible citizens that voted was 61.4 percent. However, there were
+            substantial disparities in voter turnout among age groups, with older voters turning out at much
+            higher rates than younger voters.</p>
+        <p>Select an age group to see how voter turnout varied among U.S. states.
+            <br /><br />
+            Age Group: <select id="age-group" required>
+                <option value="Per_Voted">18+</option>
+                <option value="Per_Voted_18_24">18-24</option>
+                <option value="Per_Voted_25_34">25-34</option>
+                <option value="Per_Voted_35_44">35-44</option>
+                <option value="Per_Voted_45_64">45-64</option>
+                <option value="Per_Voted_65">65+</option>
+                </select>
+                <button id="button"><span id="span">Show Chart</span></button>
+        </p>
+    </div>
+
+</body>
+
+</html>
