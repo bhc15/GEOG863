@@ -171,17 +171,15 @@ require([
 
                     // query features based on state name
                     voterTurnout.queryFeatures(query).then(function (result) {
-                        if (result) {
-                            // open popup for state
-                            myView.popup.open({
-                                features: result.features,
-                                location: {
-                                    type: "point",
-                                    longitude: result.features[0].geometry.centroid.x,
-                                    latitude: result.features[0].geometry.centroid.y
-                                }
-                            });
-                        }
+                        // open popup for state
+                        myView.popup.open({
+                            features: result.features,
+                            location: {
+                                type: "point",
+                                longitude: result.features[0].geometry.centroid.x,
+                                latitude: result.features[0].geometry.centroid.y
+                            }
+                        });
                     });
                 }
             }
