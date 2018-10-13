@@ -11,7 +11,8 @@ require([
     "dojo/domReady!"
 ],
     function (Map, MapView, FeatureLayer, colorRendererCreator, Legend, Home, ScaleBar, Standby) {
-
+        var sidePane = document.getElementById("sidePane");
+        var chart = document.getElementById("chart");
         var ageSelect = document.getElementById("age-group");
         var button = document.getElementById("button");
 
@@ -47,19 +48,26 @@ require([
         document.body.appendChild(standby.domNode);
         standby.startup();
 
+        // when view loads, generate renderer and add widgets
         myView.when(function () {
             generateRenderer();
             addWidgets();
         });
 
+        // add event listeners for when user changes age group, clicks show chart button, hovers over chart
         ageSelect.addEventListener("change", generateRenderer);
         button.addEventListener("click", showChart);
+        chart.addEventListener("mouseover", onChartHover);
+        chart.addEventListener("mouseout", function () {
+            myView.popup.close();
+        });
 
         function generateRenderer() {
             standby.show();
             fieldLabel = ageSelect.options[ageSelect.selectedIndex].text;
             fieldName = ageSelect.value;
 
+            // parameters for color renderer creator
             var params = {
                 layer: voterTurnout,
                 field: fieldName,
@@ -84,6 +92,7 @@ require([
         function addPopup(fieldName) {
             fieldName = fieldName.toUpperCase();
 
+            // object of field names associated with each age group
             var fields = {
                 PER_VOTED: ["{TOT_VOTED}", "{TOT_POP}", "18+"],
                 PER_VOTED_18_24: ["{TOT_VOTED_18_24}", "{TOT_POP_18_24}", "18-24"],
@@ -91,7 +100,7 @@ require([
                 PER_VOTED_35_44: ["{TOT_VOTED_35_44}", "{TOT_POP_35_44}", "35-44"],
                 PER_VOTED_45_64: ["{TOT_VOTED_45_64}", "{TOT_POP_45_64}", "45-64"],
                 PER_VOTED_65: ["{TOT_VOTED_65}", "{TOT_POP_65}", "65+"]
-            }
+            };
 
             // create PopupTemplate 
             var popUp = {
@@ -103,27 +112,12 @@ require([
             voterTurnout.popupTemplate = popUp;
         }
 
-        function showChart() {
-            var sidePane = document.getElementById("sidePane");
-            var span = document.getElementById("span");
-            if (sidePane.style.visibility == "hidden" | sidePane.style.visibility == "") {
-                sidePane.style.visibility = "initial";
-                sidePane.style.opacity = 1;
-                span.innerHTML = "Hide Chart";
-            }
-            else {
-                sidePane.style.visibility = "hidden";
-                sidePane.style.opacity = 0;
-                span.innerHTML = "Show Chart";
-            }
-        }
-
         function createChart(fieldLabel, fieldName) {
-            var chart = document.getElementById("chart");
             var title = document.getElementById("title");
             chart.innerHTML = "";
             title.innerHTML = "<h4>Age Group: " + fieldLabel + "</h4>";
 
+            // create definition object for chart 
             var definition = {
                 type: "bar-horizontal",
                 datasets: [
@@ -145,6 +139,52 @@ require([
             var cedarChart = new cedar.Chart("chart", definition);
             cedarChart.show();
             standby.hide();
+        }
+
+        function showChart() {
+            var span = document.getElementById("span");
+
+            // if chart is hidden, show chart and change button text
+            if (sidePane.style.visibility == "hidden" | sidePane.style.visibility == "") {
+                sidePane.style.visibility = "initial";
+                sidePane.style.opacity = 1;
+                span.innerHTML = "Hide Chart";
+            }
+
+            // if chart is shown, hide chart and reset button text
+            else {
+                sidePane.style.visibility = "hidden";
+                sidePane.style.opacity = 0;
+                span.innerHTML = "Show Chart";
+            }
+        }
+
+        function onChartHover(e) {
+            // if chart is visible, get state name from mouse location
+            if (sidePane.style.visibility == "initial") {
+                var text = e.target.innerHTML;
+
+                if (text == text.toUpperCase() && text != "") {
+                    var state = text;
+                    var query = voterTurnout.createQuery();
+                    query.where = "NAME = '" + state + "'";
+
+                    // query features based on state name
+                    voterTurnout.queryFeatures(query).then(function (result) {
+                        if (result) {
+                            // open popup for state
+                            myView.popup.open({
+                                features: result.features,
+                                location: {
+                                    type: "point",
+                                    longitude: result.features[0].geometry.centroid.x,
+                                    latitude: result.features[0].geometry.centroid.y
+                                }
+                            });
+                        }
+                    });
+                }
+            }
         }
 
         function addWidgets() {
@@ -172,6 +212,5 @@ require([
             });
             myView.ui.add(homeWidget, "top-left");
         }
-
     });
 
