@@ -35,7 +35,10 @@ require([
             center: [-110, 47],
             zoom: 4,
             popup: {
-                autoCloseEnabled: true
+                autoCloseEnabled: true,
+                dockOptions: {
+                    position: "top-center"
+                }
             }
         });
 
