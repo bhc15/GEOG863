@@ -36,7 +36,7 @@ require([
             zoom: 4,
             popup: {
                 autoCloseEnabled: true,
-                dockEnabled: true,
+                dockEnabled: false,
             }
         });
 
@@ -85,11 +85,11 @@ require([
                     voterTurnout.renderer = response.renderer;
                 });
 
-            addPopup(fieldName);
+            definePopup(fieldName);
             createChart(fieldLabel, fieldName);
         }
 
-        function addPopup(fieldName) {
+        function definePopup(fieldName) {
             fieldName = fieldName.toUpperCase();
 
             // object of field names associated with each age group
